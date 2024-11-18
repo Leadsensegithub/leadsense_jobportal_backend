@@ -1,0 +1,1 @@
+const data = "This is bookmarks.js";

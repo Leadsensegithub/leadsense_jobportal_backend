@@ -1,0 +1,1 @@
+const data = "This is JobSkill.js";

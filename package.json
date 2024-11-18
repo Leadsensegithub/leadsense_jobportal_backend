@@ -1,0 +1,40 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nareshpraba@bitbucket.org/pnimi/snaapwebportal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pnimi/snaapwebportal#readme",
+  "dependencies": {
+    "@types/set-tz": "^0.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.3",
+    "express-fileupload": "^1.4.0",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.4",
+    "localize": "^0.4.7",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7",
+    "set-tz": "^0.2.0",
+    "uuid": "^8.3.2"
+  }
+}
