@@ -24,12 +24,13 @@ module.exports = {
     'PATTERN_MATCH: $[1] $[2]': {
       default: '$[1] and $[2] does not match'
     },
-    'CUSTOM_MSG: $[1]':{
+    'CUSTOM_MSG: $[1]': {
       default: '$[1]'
     },
     OTP: {
       default: 'Please enter a valid OTP of 4 digit'
     },
+
     INVALID_FIELDNAME: {
       default: 'Please enter a valid field name'
     },
@@ -44,7 +45,7 @@ module.exports = {
     },
     INVALID_PAYMENT_MODE: {
       default: 'Please select a valid Payment Mode'
-    },   
+    },
     INVALID_CLEANLINESS: {
       default: 'Please provide a boolean value 0 or 1 (0-true or 1-false)'
     },
@@ -95,7 +96,7 @@ module.exports = {
     'TRY_LOGIN: $[1]': {
       default: 'This user account already exists. Please login using $[1]'
     },
-    'CUSTOM_MSG: $[1]':{
+    'CUSTOM_MSG: $[1]': {
       default: '$[1]'
     }
   },

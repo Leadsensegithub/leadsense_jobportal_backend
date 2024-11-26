@@ -1,7 +1,7 @@
-const Localize       = require('localize')
-const error          = require('./../utils/error-msg')
+const Localize = require('localize')
+const error = require('./../utils/error-msg')
 const paramsErrorMsg = new Localize(error.PARAM_ERROR)
-const ctrlErrorMsg   = new Localize(error.ERROR)
+const ctrlErrorMsg = new Localize(error.ERROR)
 const ctrlSuccessMsg = new Localize(error.SUCCESS)
 
 module.exports.requestHandler = (error, status, callback) => {
@@ -11,7 +11,7 @@ module.exports.requestHandler = (error, status, callback) => {
     message.status = 400
     message.error = status
     let messageData = {};
-    error.forEach((row,index,array) => {
+    error.forEach((row, index, array) => {
       var multiMsg = row.msg.split(',');
       var errMsg = paramsErrorMsg.translate(multiMsg[0], multiMsg[1], multiMsg[2], multiMsg[3]);
       messageData[row.param] = errMsg;
