@@ -4,7 +4,8 @@ const router = express.Router()
 const { check, body, validationResult } = require('express-validator')
 const {
     Addnewusers,
-    VerifyOTP
+    VerifyOTP,
+    job_seeker_stage_one
 
 } = require('../services/User')
 const { requestHandler, ctrlHandler } = require('../utils/error-handler')
@@ -59,10 +60,10 @@ router.post('/verify_otp', [
 })
 
 router.post('/job_seeker/stage_one', [
-    check('name').notEmpty().withMessage('REQUIRED: $[1],name'),
-    check('email').notEmpty().withMessage('REQUIRED: $[1],email'),
-    check('phone').notEmpty().withMessage('REQUIRED: $[1],phone'),
-    check('password').notEmpty().withMessage('REQUIRED: $[1],password'),
+    check('exp').notEmpty().withMessage('REQUIRED: $[1],exp'),
+    check('location').notEmpty().withMessage('REQUIRED: $[1],live_location'),
+    check('user_id').notEmpty().withMessage('REQUIRED: $[1],user_id'),
+
 
 
 ], (req, res) => {

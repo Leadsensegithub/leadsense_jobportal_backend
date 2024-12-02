@@ -125,4 +125,32 @@ module.exports.VerifyOTP = async (req, callback) => {
         return callback(getResponse())
     }
 };
+module.exports.job_seeker_stage_one = async (req, callback) => {
+    try {
+        const { exp, location, user_id } = req.body;
+
+
+        let condition = { 'and': { email: email } };
+
+
+        const user_d = {
+            experience_status: exp,
+            location: location
+
+        }
+        var user_details = await updateModel('users_details', user_d, con)
+
+        if (deleteOtp.error) {
+            console.error(`OTP_CLEANUP_ERROR: ${deleteOtp.sqlMessage}`);
+        }
+        // console.log(deleteOtp)   
+
+        return callback(getResponse(200, deleteOtp, 'OTP'))
+
+
+    } catch (err) {
+        console.error(err);
+        return callback(getResponse())
+    }
+};
 
